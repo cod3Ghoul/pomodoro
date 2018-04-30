@@ -1,11 +1,18 @@
+"""(WIP) A pomodoro timer. Currently can only be used from a command-line interface."""
 import os
 import time
 
 
+# Global pomodoro counter
 pomodoros = 0
 
 
-def pomodoro_timer(pomodoro_length=5):
+def pomodoro_timer(pomodoro_length=25):
+    """Time each pomodoro.
+    
+    Keyword argument:
+    pomodoro_length -- length in minutes of pomodoro (default 25)
+    """
     seconds = 0
     minutes = 0
     global pomodoros
@@ -32,7 +39,12 @@ def pomodoro_timer(pomodoro_length=5):
         time.sleep(1)
 
 
-def break_between_pomodoros(break_length=3):
+def break_between_pomodoros(break_length=5):
+    """Time each break between pomodoros.
+    
+    Keyword argument:
+    break_length -- length in minutes of break (default 5)
+    """
     seconds = 0
     minutes = 0
     while True:
@@ -55,6 +67,7 @@ def break_between_pomodoros(break_length=3):
 
 
 def main():
+    """Entry point for program."""
     start = input('Enter S to start your first pomodoro or E to exit: ')
     if start.lower() == 's':
         while True:
@@ -67,7 +80,7 @@ def main():
             if pomodoros == 4:
                 long_break = input('Enter B to start a LONG break: ')
                 if long_break.lower() == 'b':
-                    break_between_pomodoros(4)
+                    break_between_pomodoros(20)
             con = input('\n1) Enter S to start your next pomodoro.\n'
                         '2) Enter R to reset your pomodoro count\n'
                         '   and start a new set of pomodoros.\n'
