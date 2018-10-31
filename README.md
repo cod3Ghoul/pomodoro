@@ -24,7 +24,7 @@ I am still continuing to develop this timer, so until further updates, you can s
 - If you choose **default**, as soon as you hit *Enter* your first timer will begin.
 - **NOTE**: You do have to enter *default*, *custom*, or *quit* exactly (case in-sensitive) or you will just get an error message and then be sent back to this main menu.
 
-![main menu](img/main_menu.png)
+![main menu](img/main_menu.PNG)
 
 - If you choose **custom** from the main menu, you will be prompted for the settings you would like, so you can customize your set of pomodoros and length of breaks.
 - Below is a screenshot of what will be displayed after you finish entering all your setting options.
